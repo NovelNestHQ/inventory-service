@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Book" ADD COLUMN     "user_id" TEXT NOT NULL DEFAULT '0d8bad6a-cf81-4645-8d06-80e488f137b4';

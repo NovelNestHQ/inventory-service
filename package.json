@@ -1,0 +1,40 @@
+{
+  "name": "novelnest-inventory-service",
+  "version": "1.0.0",
+  "description": "Inventory service for NovelNest",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development ts-node ./src",
+    "dev:hot": "nodemon --exec \"yarn dev\" --watch ./src --ext .ts",
+    "migrate": "npx prisma migrate dev --name init",
+    "generate": "npx prisma generate",
+    "docker-migrate": "docker exec -it inventory-service npx prisma migrate dev --name init",
+    "docker-generate": "docker exec -it inventory-service npx prisma generate"
+  },
+  "author": "lucifergene",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "amqplib": "^0.10.5",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.14.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/connect-flash": "^0.0.40",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/pg": "^8.11.11",
+    "prisma": "^6.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
